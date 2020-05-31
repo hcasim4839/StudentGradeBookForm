@@ -10,31 +10,23 @@ using System.Windows.Forms;
 
 namespace StudentGradeBookForm
 {
-    public partial class Form1 : Form
+    public partial class loginFrm : Form
     {
-        public Form1()
+        public loginFrm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-            loginFrm objLF = new loginFrm();
-
-            this.Hide();
-
-            objLF.ShowDialog();
-
-            this.Show();
+            
         }
 
-        private void btnRegist_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
-            RegistFrm objRF = new RegistFrm();
-
-            this.Hide();
-            objRF.ShowDialog();
-            this.Show();
+            txtUser.Text = "";
+            txtPassword.Text = "";
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
